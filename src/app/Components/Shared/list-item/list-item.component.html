@@ -1,0 +1,9 @@
+<li
+  (click)="onClick()"
+  class="text-white hover:cursor-pointer hover:scale-125 bg-green-600 transition ease-in-out rounded-full flex flex-row justify-center gap-2 items-center h-fit min-w-[150px] max-w-fit p-1.5 px-4"
+>
+  @if (icon) {
+  <mat-icon>{{ icon }}</mat-icon>
+  }
+  {{ label }}
+</li>

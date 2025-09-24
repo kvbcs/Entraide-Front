@@ -1,0 +1,51 @@
+<header
+  class="bg-black w-full h-[10vh] flex flex-row justify-between items-center px-4"
+>
+  <figure class="w-fit h-full cover-fill">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZVWz8eexS2CVJSv4Ix1k8R24wkMHJWgrvrA&s"
+      alt=""
+      class="h-full w-full"
+    />
+  </figure>
+
+  <nav class="w-1/3 h-full flex flex-row items-center justify-center lg:hidden">
+    <button
+      matIconButton
+      [matMenuTriggerFor]="menu"
+      aria-label="Bouton de navigation"
+      class="bg-white rounded-full w-fit p-2 flex flex-col items-center justify-center h-fit lg:hidden"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+  </nav>
+
+  <nav
+    class="text-white hidden lg:flex flex-row items-center h-full justify-center min-w-1/3 max-w-fit"
+  >
+    <ul
+      class="hidden lg:flex flex-row items-center justify-evenly h-full w-full gap-8"
+    >
+      <app-list-item label="Accueil" icon="home"></app-list-item>
+      <app-list-item
+        label="Distribution"
+        icon="shopping_basket"
+      ></app-list-item>
+      <app-list-item label="Contact" icon="contact_phone"></app-list-item>
+    </ul>
+  </nav>
+</header>
