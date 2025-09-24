@@ -7,7 +7,6 @@ import { ListItemComponent } from "../../Shared/list-item/list-item.component";
   selector: 'app-header',
   imports: [MatMenuModule, MatIconModule, ListItemComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

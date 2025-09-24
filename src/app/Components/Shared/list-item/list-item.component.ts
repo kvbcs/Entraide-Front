@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-list-item',
   imports: [MatIconModule],
   templateUrl: './list-item.component.html',
-  styleUrl: './list-item.component.css',
 })
 export class ListItemComponent {
   @Input() label: string = 'Texte';

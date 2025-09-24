@@ -10,7 +10,6 @@ import {
   selector: 'app-register',
   imports: [ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css',
 })
 export class RegisterComponent {
   registerForm: FormGroup = new FormGroup({
