@@ -1,0 +1,16 @@
+<main class="h-screen">
+  <h1 class="text-4xl font-bold text-center my-10">Administration Bénévoles</h1>
+  <nav class="mb-10 w-full">
+    <ul class="flex w-full justify-evenly items-center">
+      <li class="bg-green-600 p-3 rounded-full text-white font-bold">Utilisateurs</li>
+      <li class="bg-green-600 p-3 rounded-full text-white font-bold">Bénévoles</li>
+    </ul>
+  </nav>
+  @if(volunteers().length > 0) { @for(volunteer of volunteers(); track volunteer.id_volunteer) {
+  <p class="px-4 py-2 border-b">
+    {{ volunteer.first_name }} {{ volunteer.last_name }}
+  </p>
+  } } @else {
+  <p class="text-center text-gray-500">Chargement des bénévoles...</p>
+  }
+</main>

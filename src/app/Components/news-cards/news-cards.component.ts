@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { News } from '../../../Models/news.types';
+import { News } from '../../Models/news.types';
 
 @Component({
   selector: 'app-news-cards',
@@ -7,10 +7,9 @@ import { News } from '../../../Models/news.types';
   templateUrl: './news-cards.component.html',
 })
 export class NewsCardsComponent {
-  @Input() news!: News
-  
+  @Input() news!: News;
+
   log() {
     console.log(this.news.id_news);
-    
   }
 }

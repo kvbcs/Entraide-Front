@@ -24,13 +24,23 @@
         <span>Accueil</span>
       </button>
       <button mat-menu-item routerLink="/news">
-        <mat-icon>info</mat-icon>
+        <mat-icon>newspaper</mat-icon>
         <span>Actualités</span>
       </button>
       <button mat-menu-item routerLink="/">
         <mat-icon>contact_phone</mat-icon>
         <span>Contact</span>
       </button>
+      <button mat-menu-item routerLink="/admin/users">
+        <mat-icon>manage_accounts</mat-icon>
+        <span>Administration</span>
+      </button>
+      @if(isLoggedIn){
+      <button mat-menu-item routerLink="/">
+        <mat-icon>logout</mat-icon>
+        <span>Déconnexion</span>
+      </button>
+      } @else {
       <button mat-menu-item routerLink="/register">
         <mat-icon>how_to_reg</mat-icon>
         <span>Inscription</span>
@@ -39,6 +49,7 @@
         <mat-icon>login</mat-icon>
         <span>Connexion</span>
       </button>
+      }
     </mat-menu>
   </nav>
 
@@ -49,7 +60,7 @@
       class="hidden lg:flex flex-row items-center justify-evenly h-full w-full gap-8"
     >
       <app-list-item label="Accueil" icon="home"></app-list-item>
-      <app-list-item label="Actualités" icon="info"></app-list-item>
+      <app-list-item label="Actualités" icon="newspaper"></app-list-item>
       <app-list-item label="Contact" icon="contact_phone"></app-list-item>
       <app-list-item label="Inscription" icon="how_to_reg"></app-list-item>
       <app-list-item label="Connexion" icon="login"></app-list-item>

@@ -1,0 +1,18 @@
+<main class="h-screen">
+  <h1 class="text-4xl font-bold text-center my-10">Administration</h1>
+  <nav class="mb-10 w-full">
+    <ul class="flex w-full justify-evenly items-center">
+      <li class="bg-green-600 p-3 rounded-full text-white font-bold">Utilisateurs</li>
+      <li class="bg-green-600 p-3 rounded-full text-white font-bold">Bénévoles</li>
+    </ul>
+  </nav>
+  @if(users().length > 0) { @for(user of users(); track user.id_user) {
+  <p class="px-4 py-2 border-b">
+    {{ user.first_name }} {{ user.last_name }} {{ user.email }} {{ user.role }}
+    {{ user.is_active ? "actif" : "inactif" }}
+    {{ user.is_verified ? "vérifié" : "invérifié" }}
+  </p>
+  } } @else {
+  <p class="text-center text-gray-500">Chargement des utilisateurs...</p>
+  }
+</main>

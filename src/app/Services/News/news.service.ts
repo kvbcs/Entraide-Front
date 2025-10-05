@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from '../../Environments/environment';
 import { Observable, tap } from 'rxjs';
+import { environment } from '../../../Environments/environment';
 import { News } from '../../Models/news.types';
 import { ApiResponse } from '../../Models/response.types';
 
