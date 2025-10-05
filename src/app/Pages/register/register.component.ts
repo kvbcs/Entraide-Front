@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormGroup,
   FormControl,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { AuthService } from '../../../Services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,13 +14,16 @@ import {
   templateUrl: './register.component.html',
 })
 export class RegisterComponent {
+  private readonly authService = inject(AuthService);
+  private router = inject(Router);
+
   registerForm: FormGroup = new FormGroup({
-    firstName: new FormControl('', [
+    first_name: new FormControl('', [
       Validators.required,
       Validators.minLength(1),
       Validators.maxLength(50),
     ]),
-    lastName: new FormControl('', [
+    last_name: new FormControl('', [
       Validators.required,
       Validators.minLength(1),
       Validators.maxLength(50),
@@ -40,8 +45,17 @@ export class RegisterComponent {
     if (!this.registerForm.valid) {
       return alert('invalid');
     }
-    console.log(this.registerForm.value);
 
-    return alert('valid');
+    this.authService.Register(this.registerForm.value).subscribe({
+      next: (res) => {
+        console.log(res);
+        alert(res.message);
+        this.router.navigate(['/login']);
+      },
+      error: (err) => {
+        console.log(err);
+        alert(err.message || 'unknown error')
+      }
+    });
   }
 }
