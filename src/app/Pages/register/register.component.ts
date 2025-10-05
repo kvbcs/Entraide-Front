@@ -5,7 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { AuthService } from '../../../Services/auth.service';
+import { AuthService } from '../../../Services/Auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -54,8 +54,8 @@ export class RegisterComponent {
       },
       error: (err) => {
         console.log(err);
-        alert(err.message || 'unknown error')
-      }
+        alert(err.message || 'unknown error');
+      },
     });
   }
 }

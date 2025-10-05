@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { environment } from '../Environments/environment';
-import { Auth } from '../Models/auth.types';
+import { environment } from '../../Environments/environment';
+import { Auth } from '../../Models/auth.types';
 import { Observable } from 'rxjs';
-import { ApiResponse } from '../Models/response.types';
+import { ApiResponse } from '../../Models/response.types';
 
 @Injectable({
   providedIn: 'root',

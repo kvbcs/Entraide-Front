@@ -1,7 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../../Services/auth.service';
+import { AuthService } from '../../../Services/Auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +42,7 @@ export class LoginComponent {
       },
       error: (err) => {
         console.log(err);
-        
+
         alert(err.message || 'unknown error');
       },
     });
