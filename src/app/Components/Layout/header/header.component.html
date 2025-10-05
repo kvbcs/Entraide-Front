@@ -19,17 +19,25 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>dialpad</mat-icon>
-        <span>Redial</span>
+      <button mat-menu-item routerLink="/">
+        <mat-icon>home</mat-icon>
+        <span>Accueil</span>
       </button>
-      <button mat-menu-item disabled>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voice mail</span>
+      <button mat-menu-item routerLink="/news">
+        <mat-icon>info</mat-icon>
+        <span>Actualités</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
+      <button mat-menu-item routerLink="/">
+        <mat-icon>contact_phone</mat-icon>
+        <span>Contact</span>
+      </button>
+      <button mat-menu-item routerLink="/register">
+        <mat-icon>how_to_reg</mat-icon>
+        <span>Inscription</span>
+      </button>
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>login</mat-icon>
+        <span>Connexion</span>
       </button>
     </mat-menu>
   </nav>
@@ -41,11 +49,10 @@
       class="hidden lg:flex flex-row items-center justify-evenly h-full w-full gap-8"
     >
       <app-list-item label="Accueil" icon="home"></app-list-item>
-            <app-list-item label="Actualités" icon="info"></app-list-item>
+      <app-list-item label="Actualités" icon="info"></app-list-item>
       <app-list-item label="Contact" icon="contact_phone"></app-list-item>
-            <app-list-item label="Inscription" icon="how_to_reg"></app-list-item>
+      <app-list-item label="Inscription" icon="how_to_reg"></app-list-item>
       <app-list-item label="Connexion" icon="login"></app-list-item>
-
     </ul>
   </nav>
 </header>

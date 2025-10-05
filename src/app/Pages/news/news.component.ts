@@ -1,10 +1,11 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { NewsService } from '../../../Services/News/news.service';
 import { News } from '../../../Models/news.types';
+import { NewsCardsComponent } from '../../Components/news-cards/news-cards.component';
 
 @Component({
   selector: 'app-news',
-  imports: [],
+  imports: [NewsCardsComponent],
   templateUrl: './news.component.html',
 })
 export class NewsComponent implements OnInit{
