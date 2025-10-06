@@ -1,5 +1,5 @@
 <header
-  class="bg-black w-full h-[10vh] flex flex-row justify-between items-center px-4"
+  class=" w-full h-[10vh] flex flex-row justify-between items-center px-4"
 >
   <figure class="w-fit h-full cover-fill">
     <img
@@ -14,7 +14,7 @@
       matIconButton
       [matMenuTriggerFor]="menu"
       aria-label="Bouton de navigation"
-      class="bg-white rounded-full w-fit p-2 flex flex-col items-center justify-center h-fit lg:hidden"
+      class="bg-black rounded-full w-fit p-2 flex flex-col items-center justify-center h-fit lg:hidden"
     >
       <mat-icon>menu</mat-icon>
     </button>
@@ -27,10 +27,10 @@
         <mat-icon>newspaper</mat-icon>
         <span>Actualités</span>
       </button>
-      <button mat-menu-item routerLink="/">
+      <!-- <button mat-menu-item routerLink="/">
         <mat-icon>contact_phone</mat-icon>
         <span>Contact</span>
-      </button>
+      </button> -->
       <button mat-menu-item routerLink="/admin/users">
         <mat-icon>manage_accounts</mat-icon>
         <span>Administration</span>
@@ -54,16 +54,17 @@
   </nav>
 
   <nav
-    class="text-white hidden lg:flex flex-row items-center h-full justify-center min-w-1/3 max-w-fit"
+    class="text-black hidden lg:flex flex-row items-center h-full justify-center min-w-1/3 max-w-fit"
   >
     <ul
       class="hidden lg:flex flex-row items-center justify-evenly h-full w-full gap-8"
     >
-      <app-list-item label="Accueil" icon="home"></app-list-item>
-      <app-list-item label="Actualités" icon="newspaper"></app-list-item>
-      <app-list-item label="Contact" icon="contact_phone"></app-list-item>
-      <app-list-item label="Inscription" icon="how_to_reg"></app-list-item>
-      <app-list-item label="Connexion" icon="login"></app-list-item>
+      <app-list-item label="Accueil" icon="home" routerLink="/"></app-list-item>
+      <app-list-item label="Actualités" icon="newspaper" routerLink="/news"></app-list-item>
+            <app-list-item label="Administration" icon="manage_accounts" routerLink="/admin/users"></app-list-item>
+      <!-- <app-list-item label="Contact" icon="contact_phone"></app-list-item> -->
+      <app-list-item label="Inscription" icon="how_to_reg" routerLink="/register"></app-list-item>
+      <app-list-item label="Connexion" icon="login" routerLink="/login"></app-list-item>
     </ul>
   </nav>
 </header>

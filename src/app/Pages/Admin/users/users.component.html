@@ -3,7 +3,7 @@
   <nav class="mb-10 w-full">
     <ul class="flex w-full justify-evenly items-center">
       <li class="bg-green-600 p-3 rounded-full text-white font-bold">Utilisateurs</li>
-      <li class="bg-green-600 p-3 rounded-full text-white font-bold">Bénévoles</li>
+      <li class="bg-green-600 p-3 rounded-full text-white font-bold" routerLink="/admin/volunteers">Bénévoles</li>
     </ul>
   </nav>
   @if(users().length > 0) { @for(user of users(); track user.id_user) {

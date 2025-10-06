@@ -1,10 +1,11 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { VolunteersService } from '../../../Services/Volunteers/volunteers.service';
 import { Volunteers } from '../../../Models/volunteers.types';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-volunteers',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './volunteers.component.html',
 })
 export class VolunteersComponent implements OnInit {
